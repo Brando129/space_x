@@ -1,9 +1,42 @@
+/* CSS Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Background image */
+.fixed-bg {
+    /* The background image */
+    background-image: url("/static/img/rocket_launch.png");
+
+    /* Set a specified height, or the minimum height for the background image */
+    min-height: 500px;
+
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: fixed;
+
+    /* Center the background image */
+    background-position: center;
+
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+}
+
+/* Tab links */
+a.nav-link {
+    color: black;
+}
+
+/* Launch cards */
 .launch-card {
     border: 1px solid black;
     padding: 20px;
     margin-top: 20px;
     border-radius: 5px;
-    box-shadow: 0 5px 7px black;
+    box-shadow: 0 7px 7px black;
     transition: box-shadow 0.4s;
     display: flex;
     flex-direction: row;
@@ -11,10 +44,12 @@
     background-color: antiquewhite;
 }
 
+/* Launch card hover event */
 .launch-card:hover {
     box-shadow: 0 8px 16px black;
 }
 
+/* Launch card image */
 .launch-image {
     height: 100px;
     width: 100px;
@@ -23,12 +58,15 @@
     margin-right: 15px;
 }
 
+/* Launch card title */
 .launch-title {
     font-weight: bold;
     margin-bottom: 15px;
 }
 
+/* Launch card links */
 .launch-links a {
+    color: blue;
     text-decoration: none;
     margin-right: 10px;
 }

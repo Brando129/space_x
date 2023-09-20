@@ -1,14 +1,23 @@
+<!-- Macro jinja function -->
 {% macro render_launch(launch) %}
+<!-- Launch card -->
 <div class="launch-card">
+    <!-- Launch image. -->
     {% if launch.links.patch.large %}
         <img class="launch-image" src="{{ launch.links.patch.large }}" alt="{{ launch.name }}1">
     {% endif %}
     <div>
-        <div class="launch-title">{{ launch.name }}</div>
+        <!-- Launch name. -->
+        <h4>{{ launch.name }}</h4>
+        <!-- Launch details. -->
         {% if launch.details %}
             <p>{{ launch.details }}</p>
         {% endif %}
-        <p>{{ launch.date_utc | date_only }}</p>
+        <!-- Launch date. -->
+        <p><strong>Launch Date: </strong>{{ launch.date_utc | date_only }}</p>
+        <!-- Flight number. -->
+        <p><strong>Flight Number: </strong>{{ launch.flight_number }}</p>
+        <!-- Launch links. -->
         <div class="launch-links">
             <a href="{{ launch.links.reddit.launch }}" target="_blank">Reddit Launch</a>
             <a href="{{ launch.links.article }}" target="_blank">Article</a>
@@ -16,4 +25,6 @@
         </div>
     </div>
 </div>
+<!-- End of launch card. -->
 {% endmacro %}
+<!-- End of macro jinja function -->
